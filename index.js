@@ -24,7 +24,6 @@ app.get('/', async (req, res) => {
     try {
         const resp = await axios.get(games, { headers });
         const data = resp.data.results;
-        console.log(data);
         res.render('home', { title: 'Games | HubSpot APIs', data });      
     } catch (error) {
         console.error(error);
@@ -44,7 +43,6 @@ app.get('/update-cobj', async (req, res) => {
     try {
         const resp = await axios.get(games, { headers });
         const data = resp.data.results;
-        console.log(data);
         res.render('updates', { title: 'Update Custom Object Form | Integrating With HubSpot I Practicum', data });      
     } catch (error) {
         console.error(error);
