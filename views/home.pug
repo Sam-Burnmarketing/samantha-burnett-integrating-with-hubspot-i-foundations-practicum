@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 #{title}
+        a(href='/update-cobj') Add/update this table
+        table.objects 
+            tr
+                th Game Title 
+                th Developer 
+                th Publisher
+            each entry in data
+                tr 
+                    td= entry.properties.game_title
+                    td= entry.properties.developer 
+                    td= entry.properties.publisher 
