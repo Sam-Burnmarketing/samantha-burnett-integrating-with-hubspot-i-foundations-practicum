@@ -1,0 +1,20 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 #{title}
+        a(href='/') Return to the homepage
+        form(role='form' method='POST' action='/update')
+            div.form-group
+                label(for='name') Name:
+                    input#name.form-control(type='text', placeholder='Elden Ring' name='name')
+            div.form-group
+                label(for='developer') Developer:
+                    input#developer.form-control(type='text', placeholder='FromSoftware Inc' name='developer')
+            div.form-group
+                label(for='publisher') Publisher:
+                    input#publisher.form-control(type='text', placeholder='Bandai Namco Entertainment' name='publisher')
+            button.btn.btn-primary(type="submit", name="submit") Submit
