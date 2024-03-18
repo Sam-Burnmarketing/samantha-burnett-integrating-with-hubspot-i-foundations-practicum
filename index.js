@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
     const games = 'https://api.hubspot.com/crm/v3/objects/2-121885742?properties=game_title,developer,publisher';
 
     const headers = {
-        Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
     }
     try {
@@ -37,7 +37,7 @@ app.get('/update-cobj', async (req, res) => {
     const games = 'https://api.hubspot.com/crm/v3/objects/2-121885742';
 
     const headers = {
-        Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
     }
     try {
@@ -63,7 +63,7 @@ app.post('/update', async (req, res) => {
 
     const createRecord = `https://api.hubapi.com/crm/v3/objects/2-121885742`;
     const headers = {
-        Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
     };
 
