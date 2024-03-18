@@ -65,7 +65,7 @@ app.post('/update', async (req, res) => {
 
     const createRecord = `https://api.hubapi.com/crm/v3/objects/2-121885742`;
     const headers = {
-        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
     };
 
